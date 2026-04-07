@@ -2,6 +2,7 @@ import express from 'express';
 // Routes
 import productsRoutes from './routes/products.routes.js';
 import usersRoutes from './routes/users.routes.js'
+import overviewRoutes from './routes/overview.routes.js'
 
 const app = express();
 const host = process.env.HOST || '127.0.0.1' ;
@@ -20,6 +21,7 @@ app.use(express.json());
 // Routing
 app.use('/products', productsRoutes);
 app.use('/users', usersRoutes);
+app.use('/', overviewRoutes);
 
 app.listen(port, host, () => {
     console.log(`App listening at http://${host}:${port}/`);

@@ -5,11 +5,13 @@ import * as CartsController from "../controllers/carts.controller";
 import {} from "../middlewares/carts.validation";
 
 router.route('/')
-    .get()
+    .get(CartsController.getUserCart)
 router.route('/items')
-    .post()
+    .post(CartsController.addItem)
 router.route('items/:itemId')
-    .patch()
-    .delete()
+    .patch(CartsController.updateItem)
+    .delete(CartsController.deleteItem)
 router.route('checkout')
-    .post()
+    .post(CartsController.checkout)
+
+export default router;
