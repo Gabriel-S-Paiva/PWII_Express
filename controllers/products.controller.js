@@ -27,7 +27,7 @@ export const getProductById = (req, res) => {
     const product =  products.find(p => p.id === id)
 
     if(!product) {
-        return res.status(404).json({message:"Product not found"});
+        throw notFoundError("products",id)
     }
     res.json(product);
 }
