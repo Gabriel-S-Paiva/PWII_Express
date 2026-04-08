@@ -1,8 +1,8 @@
 import express from 'express';
 const router = express.Router();
 
-import * as CartsController from "../controllers/carts.controller";
-import {} from "../middlewares/carts.validation";
+import * as CartsController from "../controllers/carts.controller.js";
+import {} from "../middlewares/carts.validation.js";
 
 router.route('/')
     .get(CartsController.getUserCart)

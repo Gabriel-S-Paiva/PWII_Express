@@ -1,4 +1,4 @@
-import products from "../models/products.model";
+import products from "../models/products.model.js";
 import { notFoundError, validationError } from '../utils/error.utils.js'
 
 export const getAllProducts = (req, res) => {

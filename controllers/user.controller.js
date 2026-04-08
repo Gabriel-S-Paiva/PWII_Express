@@ -21,3 +21,7 @@ export const authUser = (req, res) => {
 export const getUserOrders = (req, res) => {
 
 }
+
+export const login = (req, res) => {
+    
+}

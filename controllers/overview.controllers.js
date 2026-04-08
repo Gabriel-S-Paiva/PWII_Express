@@ -1,4 +1,4 @@
-import { notFoundError, validationError } from "../utils/error.utils"
+import { notFoundError, validationError } from "../utils/error.utils.js"
 
 export const getOrders = (req, res) => {
 

@@ -1,8 +1,8 @@
 import express from 'express';
 const router = express.Router()
 
-import * as OverviewController from "../controllers/overview.controllers"
-import {} from "../middlewares/overview.validation"
+import * as OverviewController from "../controllers/overview.controllers.js"
+import {} from "../middlewares/overview.validation.js"
 
 router.route('/orders')
     .get(OverviewController.getOrders)
